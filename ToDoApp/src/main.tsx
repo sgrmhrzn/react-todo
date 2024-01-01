@@ -1,4 +1,3 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { ToDoList } from './pages/to-do-list/to-do-list.component.tsx'
 import './index.css'
@@ -6,13 +5,10 @@ import {
   createBrowserRouter,
   RouterProvider,
   Route,
-  Link,
-  BrowserRouter,
   createRoutesFromElements
 } from "react-router-dom";
 import Header from './components/header.component.tsx';
-import Home from './pages/home.component.tsx';
-import { FluentProvider, teamsLightTheme } from '@fluentui/react-components';
+import Home from './pages/home/home.component.tsx';
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Header />}>
@@ -24,11 +20,7 @@ const router = createBrowserRouter(createRoutesFromElements(
 ));
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  // <React.StrictMode>
-  // <BrowserRouter>
-    <RouterProvider router={router} />
-  // </BrowserRouter>
-  // </React.StrictMode>
+  <RouterProvider router={router} />
 )
 
 

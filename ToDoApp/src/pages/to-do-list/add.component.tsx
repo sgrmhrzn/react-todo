@@ -31,13 +31,7 @@ export const AddToDo = ({ add }: any) => {
       if (arr.every((x: any) => x.validity.valid)) {
         setValid(true);
       } 
-      // else {
-      //   setValid(false);
-      // }
     } 
-    // else {
-    //   setValid(false);
-    // }
   }
 
   return (

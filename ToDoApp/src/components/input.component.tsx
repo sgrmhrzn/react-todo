@@ -23,11 +23,6 @@ const useStyles = makeStyles({
   },
 });
 
-// interface Props {
-//   default?: InputProps;
-//   formRef: any;
-// }
-
 export const InputItem = (props: InputProps) => {
   const [isValid, setValid] = useState(false);
   const inputRef = useRef(null);
@@ -36,12 +31,6 @@ export const InputItem = (props: InputProps) => {
 
   const onChange = () => {
     (inputRef as any)?.current.validity.valid ? setValid(true) : setValid(false);
-    // if (props.formRef?.current) {
-    //   var arr = Array.from(props.formRef?.current?.elements);
-    //   if (arr.every((x: any) => x.validity.valid)) {
-    //     // props.formRef.current
-    //   }
-    // }
   }
 
   return (

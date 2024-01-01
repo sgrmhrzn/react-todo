@@ -12,11 +12,6 @@ const useStyles = makeStyles({
 });
 const Header = () => {
   const styles = useStyles();
-  const [current, setCurrent] = useState('h');
-  const onClick = (e: any) => {
-    console.log('click ', e);
-    setCurrent(e.key);
-  };
   return (
     <>
       <FluentProvider theme={teamsLightTheme}>
