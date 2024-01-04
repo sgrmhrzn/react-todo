@@ -11,7 +11,7 @@ function Home() {
             <img src={reactLogo} className="logo react" alt="React logo" />
           </a>
         </div>
-        <h1>Welcome to TODO App</h1>
+        <h1 id="welcome-text" data-testid="welcome-text">Welcome to TODO App</h1>
         <div className="card">
 
         </div>

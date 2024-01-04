@@ -4,7 +4,6 @@ import {
   DialogSurface,
   DialogTitle,
   DialogBody,
-  DialogActions,
   DialogContent,
   Button,
 } from "@fluentui/react-components";
@@ -35,11 +34,11 @@ export const AddToDo = ({ add }: any) => {
   }
 
   return (
-    <Dialog open={open} onOpenChange={(event, data) => setOpen(data.open)}>
+    <Dialog open={open} onOpenChange={(event, data) => {setOpen(data.open), event}}>
       <DialogTrigger disableButtonEnhancement>
-        <Button appearance="primary">Add</Button>
+        <Button appearance="primary" data-testid="add-btn">Add</Button>
       </DialogTrigger>
-      <DialogSurface>
+      <DialogSurface data-testid="add-dialog">
         <DialogBody>
           <DialogTitle>Add new</DialogTitle>
           <DialogContent>
