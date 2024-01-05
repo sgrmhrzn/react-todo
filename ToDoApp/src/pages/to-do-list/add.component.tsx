@@ -10,12 +10,14 @@ import {
 import { InputItem } from "../../components/input.component";
 import { useRef, useState } from "react";
 
-export const AddToDo = ({ add }: any) => {
+export const AddToDo = ({ handleAddTask }: any) => {
   const [open, setOpen] = useState(false);
   const [formValid, setValid] = useState(false);
   const formRef = useRef<any>(null);
+
+  
   const save = () => {
-    add(formRef.current[0].value);
+    handleAddTask(formRef.current[0].value);
     setValid(false);
     formRef.current.reset();
     console.log(formRef.current[0].value);

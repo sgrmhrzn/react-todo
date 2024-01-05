@@ -12,6 +12,8 @@
     "jesttest": "jest"
   },
   "dependencies": {
+    "@azure/msal-browser": "^3.6.0",
+    "@azure/msal-react": "^2.0.8",
     "@fluentui/react-components": "^9.43.3",
     "jest-environment-jsdom": "^29.7.0",
     "jest-extended": "^4.0.2",
